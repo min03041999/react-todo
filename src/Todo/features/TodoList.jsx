@@ -27,8 +27,13 @@ function TodoList(props) {
               <td>{job.jobname}</td>
               <td>{job.description}</td>
               <td>
-                {/* <button className="btn-edit" onClick={() =>  props.todoEdit(job)}>Edit</button>
-                                    <button className="btn-delete" onClick={() =>  props.todoDelete(job.id)}>Delete</button> */}
+                {/* <button className="btn-edit" onClick={() =>  props.todoEdit(job)}>Edit</button> */}
+                <button
+                  className="btn-delete"
+                  onClick={() => props.todoDelete(job.id)}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))

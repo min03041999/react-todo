@@ -32,6 +32,14 @@ function Todo(props) {
     setJobs([...jobs, job]);
   };
 
+  // Delete todo
+  const todoDelete = (id) => {
+    console.log(id);
+    const deleteJob = jobs.filter((item) => item.id !== id);
+    console.log(deleteJob);
+    setJobs(deleteJob);
+  };
+
   return (
     <div className="container">
       <div className="title">Todo List | Use React Hook</div>
@@ -44,7 +52,7 @@ function Todo(props) {
         </div>
         <div>
           <h2 className="title-item">Views Jobs</h2>
-          <TodoList jobs={jobs} />
+          <TodoList jobs={jobs} todoDelete={todoDelete} />
         </div>
       </div>
     </div>
