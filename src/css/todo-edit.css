@@ -1,14 +1,12 @@
-table,
-td,
-th {
-    border: 1px solid;
+.btn-add {
+    cursor: pointer;
     box-sizing: border-box;
-    padding: 4px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
+    padding: 10px 15px;
+    border: 1px solid yellowgreen;
+    background-color: yellowgreen;
+    color: #fff;
+    font-weight: 700;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .btn-delete {
@@ -22,19 +20,8 @@ table {
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.btn-edit {
-    cursor: pointer;
-    box-sizing: border-box;
-    padding: 10px 15px;
-    border: 1px solid lightskyblue;
-    background-color: lightskyblue;
-    color: #fff;
-    font-weight: 700;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.btn-delete:hover,
-.btn-edit:hover {
+.btn-add:hover,
+.btn-delete:hover {
     background-color: #fff;
     color: #000;
 }
