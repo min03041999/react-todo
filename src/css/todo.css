@@ -1,0 +1,38 @@
+.container {
+    max-width: 1660px;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.title-item {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.grid-row {
+    display: grid;
+    width: 100%;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.search {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+.field-search {
+    width: 40%;
+    margin: 10px 0;
+    box-sizing: border-box;
+    padding: 5px 7px;
+    border-radius: 5px;
+}
