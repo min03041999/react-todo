@@ -1,0 +1,36 @@
+form {
+    box-sizing: border-box;
+    padding: 0 200px;
+}
+
+.field-input {  
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+    padding: 5px 7px;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: 700;
+}
+
+.btn-add {
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border: 1px solid yellowgreen;
+    background-color: yellowgreen;
+    color: #fff;
+    font-weight: 700;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn-add:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
