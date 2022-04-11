@@ -1,0 +1,40 @@
+table,
+td,
+th {
+    border: 1px solid;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.btn-delete {
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border: 1px solid lightcoral;
+    background-color: lightcoral;
+    color: #fff;
+    font-weight: 700;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn-edit {
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border: 1px solid lightskyblue;
+    background-color: lightskyblue;
+    color: #fff;
+    font-weight: 700;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn-delete:hover,
+.btn-edit:hover {
+    background-color: #fff;
+    color: #000;
+}
