@@ -25,7 +25,7 @@ table {
 .btn-edit {
     cursor: pointer;
     box-sizing: border-box;
-    padding: 10px 15px;
+    padding: 7px 10px;
     border: 1px solid lightskyblue;
     background-color: lightskyblue;
     color: #fff;
