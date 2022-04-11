@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/todo.css";
 import TodoList from "./features/TodoList";
 import TodoAdd from "./features/TodoAdd";
@@ -63,9 +63,35 @@ function Todo(props) {
     setJobs(deleteJob);
   };
 
+  //search
+  const [search, setSearch] = useState("");
+  const handleChange = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const [searchResults, setSearchResults] = useState([]);
+
+  useEffect(() => {
+    const searchResults = jobs.filter((job) =>
+      job.jobname.toLowerCase().includes(search.toLowerCase())
+    );
+    setSearchResults(searchResults);
+  }, [search, jobs]);
+
   return (
     <div className="container">
-      <div className="title">Todo List | Use React Hook</div>
+      <h2 className="title">Todo List | Use React Hook</h2>
+      <div className="search">
+        <label>Search</label>
+        <input
+          className="field-search"
+          type="text"
+          placeholder="Search..."
+          value={search}
+          onChange={handleChange}
+        />{" "}
+        <br />
+      </div>
       <div className="grid-row">
         <div>
           {editing ? (
@@ -86,7 +112,11 @@ function Todo(props) {
         </div>
         <div>
           <h2 className="title-item">Views Jobs</h2>
-          <TodoList jobs={jobs} todoEdit={editRow} todoDelete={todoDelete} />
+          <TodoList
+            jobs={searchResults}
+            todoEdit={editRow}
+            todoDelete={todoDelete}
+          />
         </div>
       </div>
     </div>
